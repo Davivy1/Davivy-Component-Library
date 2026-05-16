@@ -75,7 +75,7 @@ function App() {
 
       {/* Bottle Image */}
       <section className="bottle-section" id="hero-product">
-        <img src="davivy-components/src/assets/edp.png" alt="Davivy Perfume Bottle" className="bottle-img" />
+        <img src={BottleImg}alt="Davivy Perfume Bottle" className="bottle-img" />
       </section>
 
       {/* Features */}
