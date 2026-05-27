@@ -1,10 +1,11 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Button from './components/Button'
-import FeatureCard from './components/FeatureCard'
-import TestimonialCard from './components/TestimonialCard'
-import Modal from './components/Modal'
-import ContactForm from './components/ContactForm'
+import ProductsSection from './Components/ProductsSection'
+import Navbar from './Components/Navbar'
+import Button from './Components/Button'
+import FeatureCard from './Components/FeatureCard'
+import TestimonialCard from './Components/TestimonialCard'
+import Modal from './Components/Modal'
+import ContactForm from './Components/ContactForm'
 import BottleImg from './assets/edp.png'
 
 const features = [
@@ -75,8 +76,14 @@ function App() {
 
       {/* Bottle Image */}
       <section className="bottle-section" id="hero-product">
-        <img src={BottleImg}alt="Davivy Perfume Bottle" className="bottle-img" />
-      </section>
+  <img 
+    src={BottleImg} 
+    alt="Davivy Eau de Parfum bottle" 
+    className="bottle-img"
+    width="400"
+    height="400"
+  />
+</section>
 
       {/* Features */}
       <section className="features-section" id="features">
@@ -96,6 +103,11 @@ function App() {
           ))}
         </div>
       </section>
+
+
+      {/* Products */}
+      <ProductsSection />
+
 
       {/* Testimonials */}
       <section className="testimonials-section" id="testimonials">

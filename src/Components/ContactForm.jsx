@@ -20,7 +20,7 @@ function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="form-success">
+      <div className="form-success" role="alert">
         <h3>Thank you, {formData.name}!</h3>
         <p>We'll be in touch soon.</p>
       </div>
@@ -28,41 +28,49 @@ function ContactForm() {
   }
 
   return (
-    <div className="contact-form">
+    <form className="contact-form" onSubmit={handleSubmit} aria-label="Contact form">
       <div className="form-group">
-        <label>Name</label>
+        <label htmlFor="name">Name</label>
         <input
+          id="name"
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Your name"
+          autoComplete="name"
+          required
         />
       </div>
       <div className="form-group">
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           placeholder="Your email"
+          autoComplete="email"
+          required
         />
       </div>
       <div className="form-group">
-        <label>Message</label>
+        <label htmlFor="message">Message</label>
         <textarea
+          id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
           placeholder="Your message"
           rows="4"
+          required
         />
       </div>
-      <button className="btn btn-primary" onClick={handleSubmit}>
+      <button type="submit" className="btn btn-primary">
         Send Message
       </button>
-    </div>
+    </form>
   )
 }
 
